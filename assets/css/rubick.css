@@ -2664,7 +2664,7 @@ a,
 
 a.scroll-arrow {
     font-size: 35px;
-    color: white;
+    /* color: white; */
     width: 50px;
     line-height: 52px;
     border-radius: 50%;
@@ -2682,6 +2682,7 @@ a.scroll-arrow {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     opacity: .9;
+    background-color: white;
 }
 
 a.scroll-arrow i {
@@ -2746,15 +2747,16 @@ a.carousel-control span.fa {
 
 .section-header h1 {
     letter-spacing: 0.1em;
-    font-weight: 100;
+    font-weight: bold;
     font-size: 4.5em;
-    font-family: "Slim-Joe";
+    font-family: 'Cinzel', serif;
     text-transform: uppercase;
     text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 .section-header h5 {
     font-size: 1.3em;
+    font-weight: bold;
     margin: 0 auto .5em;
     line-height: 1.5;
     letter-spacing: 0.125;
@@ -4216,11 +4218,11 @@ body.noscroll {
     .section-header .content {
         top: 50%;
     }
-    .section-header .content h1,
+    /* .section-header .content h1,
     .section-header .content h5,
     .section-header .content p {
         margin: 0;
-    }
+    } */
     .section-header .content h1 {
         font-size: 3.3em;
         letter-spacing: 0.07em;
@@ -4231,7 +4233,7 @@ body.noscroll {
     }
     .section-header .content h5 {
         font-size: 1.125em;
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
     .section-header .content .separator {
         width: 12em;
@@ -4363,15 +4365,18 @@ body.noscroll {
 }
 
 .change {
-    background-image: url("../../a8a19d777ab5fee4a3666927202d88dcba7bd42c.jpg");
+    background-image: url("../../images/a8a19d777ab5fee4a3666927202d88dcba7bd42c.jpg");
     background-size: cover;
     /* max-height: 100%; */
 }
 
 @media only screen and (max-width: 500px) {
     .change {
-        background-image: url("../../mob.png");
+        background-image: url("../../images/mob.png");
     }
+    /* .section-header h1 {
+        font-family: 'Cinzel', serif;
+    } */
 }
 
 .no-copy {
