@@ -287,7 +287,7 @@ rubik = {
     },
 
     checkScrollForTransparentNavbar: debounce(function() {
-        if ($(document).scrollTop() > 260) {
+        if ($(document).scrollTop() > 60) {
             if (transparent) {
                 transparent = false;
                 $('nav[role="navigation"]').removeClass('navbar-transparent');
@@ -385,7 +385,7 @@ rubik = {
     },
 
     initGoogleMaps: function() {
-        var myLatlng = new google.maps.LatLng(44.433530, 26.093928);
+        var myLatlng = new google.maps.LatLng(9.94700000, 78.15777778);
 
         var mapOptions = {
             zoom: 16,
@@ -398,7 +398,7 @@ rubik = {
 
         var marker = new google.maps.Marker({
             position: myLatlng,
-            title: "Hello World!"
+            title: "Manish Marbles"
         });
 
         // To add the marker to the map, call setMap();

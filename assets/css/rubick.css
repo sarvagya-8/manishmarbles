@@ -720,7 +720,7 @@ fieldset[disabled] .form-control {
 }
 
 .navbar-transparent {
-    padding-top: 15px;
+    /* padding-top: 15px; */
     background-color: transparent;
     border-bottom: 1px solid transparent;
 }
@@ -747,6 +747,7 @@ fieldset[disabled] .form-control {
 
 .navbar.navbar-fixed-top {
     transition: all .5s .1s;
+    padding-top: 0.5em;
 }
 
 .footer {
@@ -1075,7 +1076,7 @@ fieldset[disabled] .form-control {
 
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
-    background-color: #F5F5F5;
+    background-color: #27958b;
     color: #333333;
     opacity: 1;
     text-decoration: none;
@@ -4388,6 +4389,10 @@ body.noscroll {
     /* IE 10+ */
     user-select: none;
     /* Likely future */
+}
+
+.yo a {
+    color: #333;
 }
 
 
