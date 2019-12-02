@@ -77,7 +77,7 @@ $(document).ready(function() {
         setTimeout(function() {
             $('.loading').addClass('hide');
         }, 500);
-    }, 3000);
+    }, 1000);
 
 
     if ($('#contactUsMap').length != 0) {
