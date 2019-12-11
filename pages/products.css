@@ -23,7 +23,7 @@ h2 {
     /* background: #27958b; */
     padding: 10px 60px 10px 60px;
     font-size: 2.5em;
-    font-family: 'Cinzel';
+    font-family: 'Slim-Joe';
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
@@ -32,8 +32,32 @@ h2 {
     /* float: left; */
 }
 
+h4 {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .navbar-transparent {
     background-color: white;
+}
+
+#tv {
+    margin-bottom: 2em;
+    margin-right: 1em;
+    position: relative;
+    /* width: 200px; */
+    /* height: 100px; */
+    background: white;
+    border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+    color: white;
+    box-shadow: 20px 20px rgba(0, 0, 0, .15);
+    transition: all .4s ease;
+}
+
+#tv:hover {
+    border-radius: 50% 50% 50% 50% / 5% 5% 5% 5%;
+    box-shadow: 10px 10px rgba(0, 0, 0, .25);
 }
 
 @media only screen and (min-width: 1025px) {

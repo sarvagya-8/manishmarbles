@@ -37,6 +37,21 @@ var burger_menu;
 
 
 $(document).ready(function() {
+    var alterClass = function() {
+        var ww = document.body.clientWidth;
+        if (ww < 500) {
+            $('.filter').removeClass('filter-gradient-purple');
+        } else if (ww >= 501) {
+            $('.filter').addClass('filter-gradient-purple');
+        };
+    };
+    $(window).resize(function() {
+        alterClass();
+    });
+    //Fire it when the page first loads:
+    alterClass();
+
+
     BrowserDetect.init();
 
     if (BrowserDetect.browser == 'Explorer' && BrowserDetect.version <= 9) {
@@ -80,9 +95,9 @@ $(document).ready(function() {
     }, 1000);
 
 
-    if ($('#contactUsMap').length != 0) {
-        rubik.initGoogleMaps();
-    }
+    // if ($('#contactUsMap').length != 0) {
+    //     rubik.initGoogleMaps();
+    // }
 
     if ($('.content-with-opacity').length != 0) {
         content_opacity = 1;
@@ -384,26 +399,26 @@ rubik = {
         });
     },
 
-    initGoogleMaps: function() {
-        var myLatlng = new google.maps.LatLng(9.94700000, 78.15777778);
+    // initGoogleMaps: function() {
+    //     var myLatlng = new google.maps.LatLng(9.94700000, 78.15777778);
 
-        var mapOptions = {
-            zoom: 16,
-            center: myLatlng,
-            scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
-            disableDefaultUI: true,
-            styles: [{ "featureType": "administrative", "elementType": "labels", "stylers": [{ "visibility": "on" }, { "gamma": "1.82" }] }, { "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "visibility": "on" }, { "gamma": "1.96" }, { "lightness": "-9" }] }, { "featureType": "administrative", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "visibility": "on" }, { "lightness": "25" }, { "gamma": "1.00" }, { "saturation": "-100" }] }, { "featureType": "poi.business", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.park", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [{ "hue": "#ffaa00" }, { "saturation": "-43" }, { "visibility": "on" }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "labels", "stylers": [{ "visibility": "simplified" }, { "hue": "#ffaa00" }, { "saturation": "-70" }] }, { "featureType": "road.highway.controlled_access", "elementType": "labels", "stylers": [{ "visibility": "on" }] }, { "featureType": "road.arterial", "elementType": "all", "stylers": [{ "visibility": "on" }, { "saturation": "-100" }, { "lightness": "30" }] }, { "featureType": "road.local", "elementType": "all", "stylers": [{ "saturation": "-100" }, { "lightness": "40" }, { "visibility": "off" }] }, { "featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "gamma": "0.80" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "visibility": "off" }] }]
-        }
-        var map = new google.maps.Map(document.getElementById("contactUsMap"), mapOptions);
+    //     var mapOptions = {
+    //         zoom: 16,
+    //         center: myLatlng,
+    //         scrollwheel: false, //we disable de scroll over the map, it is a really annoing when you scroll through page
+    //         disableDefaultUI: true,
+    //         styles: [{ "featureType": "administrative", "elementType": "labels", "stylers": [{ "visibility": "on" }, { "gamma": "1.82" }] }, { "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "visibility": "on" }, { "gamma": "1.96" }, { "lightness": "-9" }] }, { "featureType": "administrative", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "visibility": "on" }, { "lightness": "25" }, { "gamma": "1.00" }, { "saturation": "-100" }] }, { "featureType": "poi.business", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi.park", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "geometry.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "geometry", "stylers": [{ "hue": "#ffaa00" }, { "saturation": "-43" }, { "visibility": "on" }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "labels", "stylers": [{ "visibility": "simplified" }, { "hue": "#ffaa00" }, { "saturation": "-70" }] }, { "featureType": "road.highway.controlled_access", "elementType": "labels", "stylers": [{ "visibility": "on" }] }, { "featureType": "road.arterial", "elementType": "all", "stylers": [{ "visibility": "on" }, { "saturation": "-100" }, { "lightness": "30" }] }, { "featureType": "road.local", "elementType": "all", "stylers": [{ "saturation": "-100" }, { "lightness": "40" }, { "visibility": "off" }] }, { "featureType": "transit.station.airport", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "gamma": "0.80" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "visibility": "off" }] }]
+    //     }
+    //     var map = new google.maps.Map(document.getElementById("contactUsMap"), mapOptions);
 
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            title: "Manish Marbles"
-        });
+    //     var marker = new google.maps.Marker({
+    //         position: myLatlng,
+    //         title: "Manish Marbles"
+    //     });
 
-        // To add the marker to the map, call setMap();
-        marker.setMap(map);
-    }
+    //     // To add the marker to the map, call setMap();
+    //     marker.setMap(map);
+    // }
 
 }
 
@@ -494,3 +509,13 @@ var better_browser = '<div class="container"><div class="better-browser row"><di
 // }, function() {
 //     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 // });
+
+// function checkWidth() {
+//     if ($(window).width() > 514) {
+//         $('.filter').addClass('filter-gradient-purple');
+//     } else {
+//         $('.filter').removeClass('filter-gradient-purple');
+//     }
+// }
+
+// $(window).resize(checkWidth());

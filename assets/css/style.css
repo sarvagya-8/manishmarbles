@@ -2749,8 +2749,8 @@ a.carousel-control span.fa {
 .section-header h1 {
     letter-spacing: 0.1em;
     font-weight: bold;
-    font-size: 4.5em;
-    font-family: 'Cinzel', serif;
+    font-size: 6em;
+    font-family: 'Slim-Joe';
     text-transform: uppercase;
     text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
 }
@@ -3893,7 +3893,7 @@ body.noscroll {
     font-size: 40px;
     color: #27958b;
     font-family: "Slim-Joe", "Helvetica Neue", "Arial";
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .section-numbers-1 .description,
@@ -4360,24 +4360,56 @@ body.noscroll {
 }
 
 .resp-m {
-    padding: 4px 8px;
+    padding: 4px 23px;
     height: 60px;
     max-width: 100%;
 }
 
 .change {
-    background-image: url("../../images/a8a19d777ab5fee4a3666927202d88dcba7bd42c.jpg");
+    background-image: url("../../images/desk.jpg");
     background-size: cover;
     /* max-height: 100%; */
 }
 
+.theme {
+    border-width: 1.5em;
+    border-style: solid;
+    border-top: none;
+    border-bottom: none;
+    border-image: radial-gradient( circle, rgba(149, 201, 241, 1) 0%, rgba(131, 141, 143, 1)100%) 1 100%;
+    border-image: linear-gradient( to left, rgba(149, 201, 241, 1) 0%, rgba(131, 141, 143, 1)100%) 1 100%;
+}
+
+.map {
+    background-image: url(../../images/products/Commercial01.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* height: 70%; */
+}
+
 @media only screen and (max-width: 500px) {
     .change {
-        background-image: url("../../images/mob.png");
+        background-image: url("../../images/WhatsApp1.jpeg");
+    }
+    .no-copy {
+        display: none;
+    }
+    .no-show {
+        display: none;
     }
     /* .section-header h1 {
         font-family: 'Cinzel', serif;
     } */
+    .theme {
+        border-right: 1.5em;
+        border-style: solid;
+        /* border-left: none; */
+        border-top: none;
+        border-bottom: none;
+        border-image: radial-gradient(circle, rgba(252, 191, 22, 1) 0%, rgba(229, 110, 26, 1)100%)1 100%;
+        border-image: linear-gradient(to left, rgba(252, 191, 22, 1) 0%, rgba(229, 110, 26, 1) 100%)1 100%;
+        /* border-image: linear-gradient(179deg, rgba(250, 194, 21, 1) 0%, rgba(212, 119, 0, 1) 100%); */
+    }
 }
 
 .no-copy {

@@ -28,7 +28,7 @@
 
     <meta name="keywords" content="manish marbles, marbles, indian marbles, indian marbles price, indian marbles slab, indian marbles manufacturer">
     <link href="../assets/css/bootstrap.css" rel="stylesheet" />
-    <link href="../assets/css/rubick.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="products.css" rel="stylesheet" />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Cinzel:400&display=swap" rel="stylesheet">
@@ -36,6 +36,8 @@
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
     <link href="../assets/css/fonts/pe-icon-7-stroke.css" rel="stylesheet">
     <link href="../assets/css/fonts/Rubik-Fonts.css" rel="stylesheet" />
+    <!-- fancybox files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 </head>
 
 <body id="skrollr-body">
@@ -67,7 +69,7 @@
                     </li>
                     <li>
                         <a href="../index.html#clients" data-scroll="false" data-id="#clients">
-                                Clients
+                                Brands
                             </a>
                     </li>
                     <li>
@@ -101,6 +103,23 @@
                 <h2>Wooden</h2>
             </div>
             <div class="row card add-animation animation-2 center">
+                <div id="tv" class="col-sm-6 col-xs-8 col-xs-offset-2 left">
+                    <a href="../images/products/wood-types-1-labelled.jpg" data-fancybox>
+                        <h4>SHADES</h5>
+                    </a>
+                </div>
+                <div id="tv" class="col-sm-6 col-xs-8 col-xs-offset-2">
+                    <a href="../images/products/applicationsWood/ba9a6e9dfb9baa934ea0b4ab83b33aba.jpg" data-fancybox="images">
+                        <h4>APPLICATIONS</h5>
+                    </a>
+                    <a href="../images/products/applicationsWood/Wood-stair-landing-steel-beam-wooden-staircase.jpg" data-fancybox="images"></a>
+                    <a href="../images/products/applicationsWood/WGD-1.jpg" data-fancybox="images"></a>
+                    <a href="../images/products/applicationsWood/SA444-Monterrey-00317-CedarMountain.jpg" data-fancybox="images"></a>
+                    <a href="../images/products/applicationsWood/Reclaimed-wood-wall-with-chevron-pattern-steals-the-show-in-this-bedroom.jpg" data-fancybox="images"></a>
+                    <a href="../images/products/applicationsWood/Interesting-Ceiling-Design-Look-up-more-often-1.jpg" data-fancybox="images"></a>
+                </div>
+            </div>
+            <div class="row card add-animation animation-3 center">
                 <div class="col-sm-3 col-xs-8 col-xs-offset-2 thumbnail left">
                     <a href="https://www.pergo.co.in/en-in/laminate">
                         <img class="resp" src="../images/products/pergo.png" alt="pergo" />
@@ -120,7 +139,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row card add-animation animation-3 center">
+            <div class="row card add-animation animation-4 center">
                 <div class="col-sm-3 thumbnail col-xs-offset-2 col-xs-8 left">
                     <a href="https://www.egger.com/shop/en_IN/products/flooring/laminate">
                         <img class="resp" src="../images/products/egger.png" alt="egger" />
@@ -275,14 +294,13 @@
 </body>
 <!--   core js files    -->
 <script src="../assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="../assets/js/bootstrap.js" type="text/javascript"></script>
 <!--   file for adding vertical points where we activate the elements animation   -->
 <script type="text/javascript" src="../assets/js/jquery.waypoints.min.js"></script>
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="../assets/js/modernizr.js"></script>
-<!--   file where we handle all the script from the Rubik page   -->
-<script type="text/javascript" src="../assets/js/rubick.js"></script>
-<!--  script for google maps   -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!--   file where we handle all the script from the web page   -->
+<script type="text/javascript" src="../assets/js/app.js"></script>
 
 </html>
